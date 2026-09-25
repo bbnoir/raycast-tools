@@ -1,0 +1,55 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "herdr",
+  "title": "Herdr",
+  "description": "Open the local Herdr or a remote Herdr over SSH in WezTerm, focusing the window if it is already open",
+  "icon": "icon.png",
+  "author": "bbnoir",
+  "categories": [
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "open-herdr",
+      "title": "Open Herdr",
+      "description": "Pick the local machine or an SSH host and open its Herdr in WezTerm",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "herdrPath",
+      "title": "Herdr Binary",
+      "description": "Path to the local herdr binary. Leave empty to look in ~/.local/bin, /opt/homebrew/bin and /usr/local/bin.",
+      "type": "textfield",
+      "required": false,
+      "default": ""
+    },
+    {
+      "name": "configPath",
+      "title": "SSH Config Path",
+      "description": "Path to SSH config",
+      "type": "textfield",
+      "required": false,
+      "default": "~/.ssh/config"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.100.0",
+    "@raycast/utils": "^2.3.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.8.0"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "lint": "ray lint"
+  }
+}

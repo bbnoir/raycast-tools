@@ -5,6 +5,7 @@ A collection of small personal [Raycast](https://www.raycast.com) extensions.
 | Extension | Description |
 | --- | --- |
 | [SSH Connect](ssh-connect) | Search hosts from `~/.ssh/config` and connect in WezTerm or Terminal.app, with pinned and recent hosts; open web pages on those hosts through auto-closing SSH tunnels |
+| [Herdr](herdr) | Open the local Herdr or a remote one over SSH in WezTerm, focusing the window if it is already open |
 
 ## Installing an extension
 
