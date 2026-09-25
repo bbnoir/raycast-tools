@@ -7,7 +7,6 @@ import {
   Keyboard,
   List,
   openExtensionPreferences,
-  PopToRootType,
   showToast,
   Toast,
 } from "@raycast/api";
@@ -52,7 +51,7 @@ export default function Command() {
       return;
     }
     await setRecent([alias, ...recent.filter((a) => a !== alias)].slice(0, MAX_RECENT));
-    await closeMainWindow({ clearRootSearch: true, popToRootType: PopToRootType.Immediate });
+    await closeMainWindow();
   }
 
   function movePinned(alias: string, delta: number) {

@@ -8,7 +8,8 @@ A Raycast extension that lists the hosts in your `~/.ssh/config` and opens an SS
 - Opens sessions in **WezTerm** (`wezterm ssh <host>`, default) or **Terminal.app** (`ssh <host>`)
 - **Pinned** hosts stay on top in the order you choose, followed by **Recent** hosts (most recent first), then everything else
 - Search by alias, hostname, or user
-- Returns Raycast to the root search after connecting
+
+> Tip: to have Raycast return to the root search right after connecting, set **Settings → Advanced → Pop to Root Search** to **Immediately**.
 
 ## Shortcuts
 
