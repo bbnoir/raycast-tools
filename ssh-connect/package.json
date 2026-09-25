@@ -1,0 +1,65 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "ssh-connect",
+  "title": "SSH Connect",
+  "description": "List hosts from ~/.ssh/config and open an SSH session in WezTerm or Terminal",
+  "icon": "icon.png",
+  "author": "bbnoir",
+  "categories": [
+    "Developer Tools"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "index",
+      "title": "SSH Connect",
+      "description": "Search SSH hosts and connect",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "terminal",
+      "title": "Terminal",
+      "description": "Terminal app used to open SSH sessions",
+      "type": "dropdown",
+      "required": false,
+      "default": "wezterm",
+      "data": [
+        {
+          "title": "WezTerm (wezterm ssh)",
+          "value": "wezterm"
+        },
+        {
+          "title": "Terminal.app",
+          "value": "terminal"
+        }
+      ]
+    },
+    {
+      "name": "configPath",
+      "title": "SSH Config Path",
+      "description": "Path to SSH config",
+      "type": "textfield",
+      "required": false,
+      "default": "~/.ssh/config"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.100.0",
+    "@raycast/utils": "^2.3.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.8.0"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "lint": "ray lint"
+  }
+}
